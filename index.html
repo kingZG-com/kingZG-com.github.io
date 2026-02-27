@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achmad Shofi Zakaria | Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0ea5e9', // Sky blue
+                        secondary: '#3b82f6', // Blue
+                        darkbg: '#0f172a', // Slate 900
+                        cardbg: '#1e293b', // Slate 800
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+        
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-card border-b-0 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter text-white">AS<span class="text-primary">Z.</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-primary transition-colors text-sm font-medium">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-primary transition-colors text-sm font-medium">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-primary transition-colors text-sm font-medium">Projects</a>
+                <a href="#experience" class="text-gray-300 hover:text-primary transition-colors text-sm font-medium">Experience</a>
+            </div>
+            <a href="#contact" class="hidden md:block px-5 py-2 rounded-full bg-primary hover:bg-secondary text-white font-medium transition-all shadow-lg shadow-primary/30">Connect</a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-300 hover:text-white" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden absolute top-full left-0 w-full glass-card flex-col py-4 px-6 space-y-4" id="mobile-menu">
+            <a href="#about" class="text-gray-300 hover:text-primary transition-colors">About</a>
+            <a href="#skills" class="text-gray-300 hover:text-primary transition-colors">Skills</a>
+            <a href="#projects" class="text-gray-300 hover:text-primary transition-colors">Projects</a>
+            <a href="#experience" class="text-gray-300 hover:text-primary transition-colors">Experience</a>
+            <a href="#contact" class="text-primary font-medium">Connect</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-4 relative">
+        <!-- Background Decoration -->
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px] -z-10"></div>
+
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="inline-block px-4 py-2 rounded-full glass-card text-sm text-primary font-medium mb-6">
+                <i class="fas fa-rocket mr-2"></i> Future Google Ambassador Candidate
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Hi, I'm <span class="text-gradient">Achmad Shofi Zakaria</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto font-light">
+                Economics Education Student at UNNES bridging economics with technological innovation through Android & Web Development.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#projects" class="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:scale-105 transition-transform shadow-lg shadow-primary/30 w-full sm:w-auto">
+                    View My Work
+                </a>
+                <a href="https://linkedin.com/in/achmad-shofi-zakaria" target="_blank" class="px-8 py-3 rounded-full glass-card hover:bg-white/10 text-white font-medium transition-all flex items-center justify-center w-full sm:w-auto">
+                    <i class="fab fa-linkedin text-xl mr-2 text-[#0A66C2]"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <!-- Placeholder for User Image -->
+                    <div class="relative w-full aspect-square md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden glass-card flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+                        <!-- NOTE UNTUK ACHMAD: Ganti tag <i> ini dengan tag <img> foto profesionalmu. Contoh: <img src="link-fotomu.jpg" alt="Achmad Shofi" class="object-cover w-full h-full"> -->
+                        <img src="fotoku.jpeg" alt="My Picture" width="500">
+                    
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About <span class="text-gradient">Me</span></h2>
+                    <div class="space-y-4 text-gray-300 font-light leading-relaxed">
+                        <p>
+                            I am an undergraduate student majoring in Economics Education at Universitas Negeri Semarang (UNNES) with a deep passion for bridging economics with technological innovation. My vision is to leverage technology to create digital solutions that drive efficiency and productivity across various sectors.
+                        </p>
+                        <p>
+                            I do not just write code; I am also passionate about sharing knowledge. Currently, I am preparing to launch an independent tech education platform, Azzakaria.dev, to help others learn programming.
+                        </p>
+                        <p>
+                            Beyond the technical realm, I have a proven track record in community leadership, having served as the Chairman of the Jepara Student Forum and Duta Baznas Jepara. My career goal is to contribute to an IT/Technology role that integrates economic insights.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="glass-card p-4 rounded-xl">
+                            <h4 class="text-primary font-bold text-2xl">2+</h4>
+                            <p class="text-sm text-gray-400">Years Coding Exp.</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl">
+                            <h4 class="text-primary font-bold text-2xl">5+</h4>
+                            <p class="text-sm text-gray-400">Tech & Social Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 relative">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">My <span class="text-gradient">Tech Stack</span></h2>
+            <p class="text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">A comprehensive list of tools and technologies I use to build scalable and efficient solutions.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mobile Dev -->
+                <div class="glass-card p-8 rounded-2xl text-left hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-xl bg-green-500/20 flex items-center justify-center mb-6">
+                        <i class="fab fa-android text-2xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Mobile Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Kotlin</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Jetpack Compose</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Android Studio</span>
+                    </div>
+                </div>
+
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-2xl text-left hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-2xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">React.js</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Next.js</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Node.js</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">PHP / MySQL</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="glass-card p-8 rounded-2xl text-left hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-2xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Economics & Domain</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Leadership</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Public Speaking</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Macro/Microeconomics</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10">Financial Tracking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" data-aos="fade-up">Featured <span class="text-gradient">Projects</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Personal Finance App -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-60 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-wallet text-6xl text-gray-700 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div class="absolute inset-0 bg-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Personal Finance Tracker</h3>
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-gray-400 font-light mb-6">
+                            A smart application integrating economic principles to track daily expenses, manage personal budgets, and visualize financial flow for better economic stability.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">Kotlin</span>
+                            <span class="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">Jetpack Compose</span>
+                            <span class="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">Room DB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: E-School -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-60 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-school text-6xl text-gray-700 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div class="absolute inset-0 bg-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">E-School Management System</h3>
+                            <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-gray-400 font-light mb-6">
+                            A comprehensive digital platform designed to streamline school administration, manage student data, and facilitate academic operations efficiently.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">PHP</span>
+                            <span class="text-xs font-medium text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">MySQL</span>
+                            <span class="text-xs font-medium text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: CV Maker -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-60 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-file-alt text-6xl text-gray-700 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">CV Maker App</h3>
+                            <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-gray-400 font-light mb-6">
+                            A native Android application designed to help users create professional resumes easily. Built entirely using modern Android development practices.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Kotlin</span>
+                            <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Azzakaria.dev -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-60 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-laptop-code text-6xl text-gray-700 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Azzakaria.dev</h3>
+                            <a href="#" class="text-gray-400 hover:text-primary"><i class="fas fa-external-link-alt text-xl"></i></a>
+                        </div>
+                        <p class="text-gray-400 font-light mb-6">
+                            An independent tech education platform and crash course focusing on Web Development to empower students with practical programming skills.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium text-secondary bg-secondary/10 px-2 py-1 rounded">Next.js</span>
+                            <span class="text-xs font-medium text-secondary bg-secondary/10 px-2 py-1 rounded">React</span>
+                            <span class="text-xs font-medium text-secondary bg-secondary/10 px-2 py-1 rounded">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Leadership -->
+    <section id="experience" class="py-20 px-4 relative">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" data-aos="fade-up">Leadership & <span class="text-gradient">Experience</span></h2>
+            
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-700 before:to-transparent">
+                
+                <!-- Exp 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active" data-aos="fade-up">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-darkbg bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                        <i class="fas fa-briefcase text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-xl text-white">Founder & Tech Educator</h3>
+                        </div>
+                        <div class="text-primary text-sm font-medium mb-3">Azzakaria.dev | 2024 - Present</div>
+                        <p class="text-gray-400 text-sm font-light">Designed and launched a comprehensive web development crash course focusing on HTML, CSS, and JavaScript to empower students.</p>
+                    </div>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active" data-aos="fade-up">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-darkbg bg-purple-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                        <i class="fas fa-users text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-xl text-white">Chairman</h3>
+                        </div>
+                        <div class="text-purple-400 text-sm font-medium mb-3">Forum Pelajar Jepara | 2023</div>
+                        <p class="text-gray-400 text-sm font-light">Led the student organization to foster collaboration and skill development. Organized community initiatives and represented the forum locally.</p>
+                    </div>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active" data-aos="fade-up">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-darkbg bg-green-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                        <i class="fas fa-hands-helping text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-xl text-white">Youth Ambassador</h3>
+                        </div>
+                        <div class="text-green-400 text-sm font-medium mb-3">BAZNAS Jepara | 2023</div>
+                        <p class="text-gray-400 text-sm font-light">Served as an ambassador to promote social awareness and philanthropic initiatives, engaging actively with local youth demographics.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's <span class="text-gradient">Connect</span></h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto font-light">I'm currently looking for new opportunities, collaborations, or tech community initiatives. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            
+            <a href="mailto:your.email@example.com" class="inline-block px-10 py-4 rounded-full bg-white text-darkbg font-bold hover:scale-105 transition-transform shadow-lg shadow-white/10 mb-12">
+                <i class="fas fa-envelope mr-2"></i> Say Hello
+            </a>
+
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary/50 transition-all text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#0A66C2]/80 transition-all text-xl">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-white hover:bg-pink-500/50 transition-all text-xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center border-t border-white/10 glass-card">
+        <p class="text-gray-500 text-sm">
+            &copy; 2026 Achmad Shofi Zakaria. Built with <i class="fas fa-heart text-red-500 mx-1"></i> and Tailwind CSS.
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            once: true,
+            offset: 50,
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Close mobile menu on click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+    </script>
+</body>
+</html>
