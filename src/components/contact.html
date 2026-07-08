@@ -1,0 +1,69 @@
+<!-- Contact Section -->
+<section id="contact" class="py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Let's <span class="text-gradient">Connect</span></h2>
+        <p class="text-slate-500 dark:text-gray-400 mb-12 max-w-xl mx-auto font-light leading-relaxed">
+            I'm currently looking for new opportunities, collaborations, or tech community initiatives. Feel free to leave a message, suggestion, or job offer!
+        </p>
+        
+        <!-- Contact Form Card -->
+        <div class="glass-card max-w-xl mx-auto p-8 rounded-3xl border border-slate-200/30 dark:border-white/5 shadow-2xl mb-12 text-left" data-aos="fade-up" data-aos-delay="100">
+            <form id="contact-form" class="space-y-6">
+                <!-- Form Status Message -->
+                <div id="form-status" class="hidden p-4.5 rounded-2xl text-sm font-semibold transition-all"></div>
+                
+                <!-- Access Key (User can replace with their own Web3Forms key) -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="text-xs font-bold text-slate-500 dark:text-gray-400 tracking-wider uppercase mb-2 block">Name</label>
+                        <input type="text" name="name" id="name" required placeholder="John Doe" 
+                            class="w-full px-5 py-3.5 rounded-2xl bg-white/50 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+                    </div>
+                    <div>
+                        <label for="email" class="text-xs font-bold text-slate-500 dark:text-gray-400 tracking-wider uppercase mb-2 block">Email Address</label>
+                        <input type="email" name="email" id="email" required placeholder="johndoe@example.com" 
+                            class="w-full px-5 py-3.5 rounded-2xl bg-white/50 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="subject" class="text-xs font-bold text-slate-500 dark:text-gray-400 tracking-wider uppercase mb-2 block">Subject</label>
+                    <input type="text" name="subject" id="subject" required placeholder="Project Inquiry / Suggestion" 
+                        class="w-full px-5 py-3.5 rounded-2xl bg-white/50 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+                </div>
+                
+                <div>
+                    <label for="message" class="text-xs font-bold text-slate-500 dark:text-gray-400 tracking-wider uppercase mb-2 block">Message</label>
+                    <textarea name="message" id="message" rows="4" required placeholder="Write your message or feedback here..." 
+                        class="w-full px-5 py-3.5 rounded-2xl bg-white/50 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"></textarea>
+                </div>
+                
+                <button type="submit" id="submit-btn" 
+                    class="w-full py-4 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-bold hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2">
+                    <span id="btn-text">Send Message</span>
+                    <i class="fas fa-paper-plane text-sm" id="btn-icon"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Alternative Contact Options -->
+        <p class="text-xs font-bold text-slate-400 dark:text-gray-500 uppercase tracking-widest mb-4">Or reach me instantly via</p>
+        <a href="https://wa.me/6283826314405" target="_blank" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 text-slate-800 dark:text-white font-bold border border-slate-200/50 dark:border-white/10 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300 mb-16 shadow-sm">
+            <i class="fab fa-whatsapp mr-2.5 text-emerald-500 text-xl"></i> Chat on WhatsApp
+        </a>
+
+        <div class="flex justify-center space-x-6">
+            <a href="https://github.com/kingZG-com" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-500 hover:text-white hover:bg-slate-900 border border-slate-200/50 dark:border-white/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-900 transition-all duration-300 text-xl" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/achmad-shofi-zakaria-3a2006266" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-500 hover:text-white hover:bg-[#0A66C2] border border-slate-200/50 dark:border-white/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-[#0A66C2] transition-all duration-300 text-xl" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/santri.code/" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-500 hover:text-white hover:bg-pink-500 border border-slate-200/50 dark:border-white/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-pink-500 transition-all duration-300 text-xl" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</section>
